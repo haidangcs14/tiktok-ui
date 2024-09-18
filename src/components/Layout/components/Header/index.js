@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
 import classNames from "classnames/bind";
 import images from "~/assets/images";
@@ -19,6 +20,7 @@ import Menu from "~/components/Popper/Menu";
 import { InboxIcon, MessageIcon, UploadIcon } from "~/components/Icons";
 import Image from "~/components/Image";
 import Search from "~/components/Layout/Search";
+import routesConfig from "~/config/routes";
 
 const cx = classNames.bind(styles);
 
@@ -34,6 +36,7 @@ const MENU_ITEMS = [
           code: "en",
           title: "English",
         },
+
         {
           type: "language",
           code: "vi",
@@ -96,8 +99,9 @@ function Header() {
   return (
     <header className={cx("wrapper")}>
       <div className={cx("inner")}>
-        <img src={images.logo} alt="TikTok" />
-
+        <Link className={cx("logo-link")} to={routesConfig.home}>
+          <img src={images.logo} alt="TikTok" />
+        </Link>
         <Search />
 
         <div className={cx("actions")}>

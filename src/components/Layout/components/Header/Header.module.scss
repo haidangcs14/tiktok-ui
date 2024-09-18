@@ -4,11 +4,16 @@
   --search-top-spacer: 9px;
   --search-button-width: 52px;
 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
   width: 100%;
-  height: var(--default-layout-header-height);
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
   display: flex;
   justify-content: center;
+  height: var(--default-layout-header-height);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
+  background-color: var(--white);
 }
 
 .inner {
@@ -19,6 +24,10 @@
   justify-content: space-between;
   caret-color: var(--primary);
   padding: 0 var(--default-layout-horizontal-spacer);
+}
+
+.logo-link {
+  display: flex;
 }
 
 .actions {
@@ -48,7 +57,7 @@
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--white);
-  font-family: "TikTokFont", system-ui;
+  font-family: var(--font-family);
   background-color: var(--primary);
 }
 
