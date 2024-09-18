@@ -8,7 +8,7 @@ import AccountItem from "~/components/AccountItem";
 import { SearchIcon } from "~/components/Icons";
 import { useDebounce } from "~/hooks";
 import { useState, useEffect, useRef } from "react";
-import * as searchServices from "~/apiServices/searchService";
+import * as searchServices from "~/services/searchService";
 
 import styles from "./Search.module.scss";
 import classNames from "classnames/bind";
